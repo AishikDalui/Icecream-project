@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{%load static%}
+{% block title %}
+Services
+{% endblock title %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: rgb(111, 111, 243);
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .content {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin: 5rem;
+      border-radius: 20px;
+      padding: 2rem;
+    }
+
+    .contentH1 {
+      font-size: 3rem;
+      color: white;
+    }
+
+    .content p {
+      color: white;
+    }
+    @media screen and (max-width: 600px){
+      div.content {
+        font-size: 0.75rem;
+      }
+      div.content .contentH1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="/static\img\s1.png" alt="loading">
+        <div class="content">
+          <h2 class="contentH1">Our passion is our success</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi maxime ratione tempore delectus eos
+            repellendus eum quasi perspiciatis. Eos exercitationem, libero atque asperiores quam deleniti laboriosam
+            sapiente incidunt ipsum mollitia natus facilis fugiat, similique voluptatum culpa accusamus eum quae magnam
+            aperiam ratione! Minus voluptate possimus eaque nesciunt, maiores ipsa impedit, expedita ipsam sunt eos
+            totam, atque tempore nemo excepturi neque?</p>
+        </div>
+      </div>
+      <div class="swiper-slide"><img src="/static\img\s2.jpg" alt="loading">
+      </div>
+      <div class="swiper-slide"><img src="/static\img\s3.jpg" alt="">
+        <div class="content">
+          <h2 class="contentH1">We are committed to help you 24/7</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi maxime ratione tempore delectus eos
+            repellendus eum quasi perspiciatis. Eos exercitationem, libero atque asperiores quam deleniti laboriosam
+            sapiente incidunt ipsum mollitia natus facilis fugiat, similique voluptatum culpa accusamus eum quae magnam
+            aperiam ratione! Minus voluptate possimus eaque nesciunt, maiores ipsa impedit, expedita ipsam sunt eos
+            totam, atque tempore nemo excepturi neque?</p>
+        </div>
+      </div>
+      <div class="swiper-slide"><img src="/static\img\s4.webp" alt="">
+        <div class="content">
+          <h2 class="contentH1">We are there for you everywhere you go</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi maxime ratione tempore delectus eos
+            repellendus eum quasi perspiciatis. Eos exercitationem, libero atque asperiores quam deleniti laboriosam
+            sapiente incidunt ipsum mollitia natus facilis fugiat, similique voluptatum culpa accusamus eum quae magnam
+            aperiam ratione! Minus voluptate possimus eaque nesciunt, maiores ipsa impedit, expedita ipsam sunt eos
+            totam, atque tempore nemo excepturi neque?</p>
+        </div>
+      </div>
+      <!-- <div class="swiper-slide">Slide 5</div>
+        <div class="swiper-slide">Slide 6</div>
+        <div class="swiper-slide">Slide 7</div>
+        <div class="swiper-slide">Slide 8</div>
+        <div class="swiper-slide">Slide 9</div> -->
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      direction: "vertical",
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      mousewheel: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+
+</html>
+
+{% endblock body %}
